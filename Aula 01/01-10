@@ -1,0 +1,36 @@
+public class Main {
+    public static void main(String[] args) {
+        Aluno aluno = new Aluno("12345",20.0);
+        System.out.println("Matricula: "+ aluno.getMatricula()+ " Nota: "+aluno.getNota());
+        System.out.println(aluno);
+
+         public Aluno (String matricula,
+                  double nota) {
+        this.matricula = matricula;
+        this.nota = nota;
+    }
+    public String getMatricula() {
+    return matricula;
+    }
+    public double getNota() {
+        return nota;
+    }
+}
+
+
+public class Ficha {
+    private Aluno alunocomMaiorNota;
+    private Aluno alunocomSegundaMaiorNota;
+    public void comparadorDeNotas(Aluno alunoNovo){
+        if( alunocomMaiorNota == null){
+            alunocomMaiorNota = alunoNovo;
+        } else if (alunocomSegundaMaiorNota == null){
+                   alunocomSegundaMaiorNota = aluno;
+        } else if ( alunocomMaiorNota.compararNota(aluno)){
+           Aluno alunoTemp = alunocomMaiorNota;
+           AlunoComMaiorNota = alunoNovo;
+           if (alunocomSegundaMaiorNota.compararNota(alunoTemp)){
+               alunocomSegundaMaiorNota = alunoTemp;
+           }
+        }
+    }
